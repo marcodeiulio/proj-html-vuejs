@@ -1,7 +1,4 @@
 @import "~bootstrap";
 @import 'vars';
 @import 'utils';
-
-.font-light {
-	font-weight: $light;
-}
+@import 'generics';

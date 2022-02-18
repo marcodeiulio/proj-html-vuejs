@@ -1,12 +1,24 @@
 @import './vars';
 
+//# Classes
+.font-light {
+	font-weight: $light;
+}
+
 .button {
 	padding: .7rem 1.1rem;
 	border-radius: 5px;
 	text-decoration: none;
+	text-transform: uppercase;
 }
 
 .button-solid {
 	color: white !important;
 	background-color: $nexgreen-dark;
+}
+
+.button-transparent {
+	color: $nexgreen-dark;
+	background-color: transparent;
+	border: 1px solid $nexgreen-dark;
 }
