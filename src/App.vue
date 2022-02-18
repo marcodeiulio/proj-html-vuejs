@@ -1,11 +1,16 @@
 <template>
-  <div id="app" class="container"></div>
+  <div id="app">
+    <SpotlightHeader />
+  </div>
 </template>
 
 <script>
+import SpotlightHeader from "./components/SpotlightHeader.vue";
 export default {
   name: "App",
-  components: {},
+  components: {
+    SpotlightHeader,
+  },
 };
 </script>
 
