@@ -1,0 +1,12 @@
+@import './vars';
+
+.button {
+	padding: .7rem 1.1rem;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+.button-solid {
+	color: white !important;
+	background-color: $nexgreen-dark;
+}
