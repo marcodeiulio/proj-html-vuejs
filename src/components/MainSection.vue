@@ -1,55 +1,18 @@
 <template>
   <main>
-    <section id="network">
-      <div class="container section-padding">
-        <div class="row">
-          <div class="col-6 px-5">
-            <description-article
-              :article-classlist="descriptions.network.classlist"
-              :article-title="descriptions.network.descriptionArticle.title"
-              :article-heading="descriptions.network.descriptionArticle.heading"
-              :article-paragraph="
-                descriptions.network.descriptionArticle.paragraph
-              "
-              :article-second-paragraph="
-                descriptions.network.descriptionArticle.secondParagraph
-              "
-            />
-          </div>
-          <div class="col-6">
-            <div class="row pt-5 g-5">
-              <div
-                class="col-6"
-                v-for="(card, index) in descriptions.network.cardArticles"
-                :key="index"
-              >
-                <card-article
-                  :card-classlist="descriptions.network.classlist"
-                  :card-heading="card.heading"
-                  :card-heading-classlist="card.headingClasslist"
-                  :card-paragraph="card.paragraph"
-                  :card-icon="card.icon"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <NetworkSection :network="descriptions.network" />
     <business-section :business="descriptions.business" />
   </main>
 </template>
 
 <script>
-import DescriptionArticle from "./DescriptionArticle.vue";
-import CardArticle from "./CardArticle.vue";
 import BusinessSection from "./BusinessSection.vue";
+import NetworkSection from "./NetworkSection.vue";
 export default {
   name: "MainSection",
   components: {
-    CardArticle,
-    DescriptionArticle,
     BusinessSection,
+    NetworkSection,
   },
   data() {
     return {
@@ -184,8 +147,4 @@ export default {
 
 <style scoped lang="scss">
 @import "../assets/scss/_vars.scss";
-
-#network {
-  background-color: $bg-darker;
-}
 </style>

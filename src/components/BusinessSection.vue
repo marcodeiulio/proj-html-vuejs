@@ -1,12 +1,16 @@
 <template>
   <section id="business">
     <div class="container section-padding">
-      <description-article
-        :article-classlist="business.classlist"
-        :article-title="business.descriptionArticle.title"
-        :article-heading="business.descriptionArticle.heading"
-        :article-paragraph="business.descriptionArticle.paragraph"
-      />
+      <div class="row">
+        <div class="col-8">
+          <description-article
+            :article-classlist="business.classlist"
+            :article-title="business.descriptionArticle.title"
+            :article-heading="business.descriptionArticle.heading"
+            :article-paragraph="business.descriptionArticle.paragraph"
+          />
+        </div>
+      </div>
       <div class="row g-4 justify-content-center">
         <div
           class="outer-card col-4"
