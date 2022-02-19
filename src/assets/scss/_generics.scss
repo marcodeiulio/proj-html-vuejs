@@ -1,10 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&family=Montserrat:wght@800&display=swap');
+* {
+	font-family: 'Inter', sans-serif;
+}
+
 //# Tags
 h2 {
-	font-size: 70px;
-	font-weight: 900;
+	font-weight: $heading-2-weight;
+	font-size: $heading-2-size;
+	font-family: 'Montserrat', sans-serif;
+}
+h3 {
+	font-weight: $heading-3-weight;
+	font-size: $heading-3-size;
+	margin-bottom: $heading-3-margin-b;
+	font-family: 'Montserrat', sans-serif;
+	span {
+		font-weight: $heading-3-weight;
+		font-size: $heading-3-size;
+		font-family: 'Montserrat', sans-serif;
+	}
 }
 h5 {
-	font-size: 18px;
+	font-size: $heading-5-weight;
+	font-size: $heading-5-size;
+}
+h6 {
+	font-weight: $heading-6-weight;
+	font-size: $heading-6-size;
+	margin-bottom: $heading-6-margin-b;
 }
 h5, h6 {
 	text-transform: uppercase;

@@ -2,7 +2,7 @@
 
 //# Classes
 .font-light {
-	font-weight: $light;
+	font-weight: $light-weight;
 }
 
 .button {
@@ -21,4 +21,36 @@
 	color: $nexgreen-dark;
 	background-color: transparent;
 	border: 1px solid $nexgreen-dark;
+}
+
+.section-padding {
+	padding-top: 130px;
+	padding-bottom: 150px;
+}
+
+.article-light {
+	color: white;
+
+	.highlight {
+	background-color: $highlight;
+	padding: 0 10px;
+	border-radius: 5px;
+	}
+	p {
+	color: $par-light;
+	}
+}
+
+.article-dark {
+	color: $nexgrey-dark;
+
+	.highlight {
+	color: $nexgreen-dark;
+	background-color: $highlight;
+	padding: 0 10px;
+	border-radius: 5px;
+	}
+	p {
+	color: $par-dark;
+	}
 }
