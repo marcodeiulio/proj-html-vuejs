@@ -32,12 +32,15 @@
 	color: white;
 
 	.highlight {
-	background-color: $highlight;
-	padding: 0 10px;
-	border-radius: 5px;
+		background-color: $highlight;
+		padding: 0 10px;
+		border-radius: 5px;
 	}
 	p {
-	color: $par-light;
+		color: $par-light;
+	}
+	i {
+		color: $nexgreen-dark;
 	}
 }
 
@@ -45,12 +48,16 @@
 	color: $nexgrey-dark;
 
 	.highlight {
-	color: $nexgreen-dark;
-	background-color: $highlight;
-	padding: 0 10px;
-	border-radius: 5px;
+		color: $nexgreen-dark;
+		background-color: $highlight;
+		padding: 0 10px;
+		border-radius: 5px;
 	}
 	p {
-	color: $par-dark;
+		color: $par-dark;
+	}
+	i {
+		color: $nexgreen-dark;
 	}
 }
+

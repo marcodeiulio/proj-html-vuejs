@@ -2,22 +2,49 @@
   <main>
     <section id="network">
       <div class="container section-padding">
-        <description-article
-          :article-title="descriptions.network.title"
-          :article-heading="descriptions.network.heading"
-          :article-paragraph="descriptions.network.paragraph"
-          :article-second-paragraph="descriptions.network.secondParagraph"
-          :article-classlist="descriptions.network.classlist"
-        />
+        <div class="row">
+          <div class="col-6 px-5">
+            <description-article
+              :article-classlist="descriptions.network.classlist"
+              :article-title="descriptions.network.descriptionArticle.title"
+              :article-heading="descriptions.network.descriptionArticle.heading"
+              :article-paragraph="
+                descriptions.network.descriptionArticle.paragraph
+              "
+              :article-second-paragraph="
+                descriptions.network.descriptionArticle.secondParagraph
+              "
+            />
+          </div>
+          <div class="col-6">
+            <div class="row pt-5 g-5">
+              <div
+                class="col-6"
+                v-for="(card, index) in descriptions.network.cardArticles"
+                :key="index"
+              >
+                <card-article
+                  :card-classlist="descriptions.network.classlist"
+                  :card-heading="card.heading"
+                  :card-heading-classlist="card.headingClasslist"
+                  :card-paragraph="card.paragraph"
+                  :card-icon="card.icon"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section id="business">
       <div class="container section-padding">
         <description-article
-          :article-title="descriptions.business.title"
-          :article-heading="descriptions.business.heading"
-          :article-paragraph="descriptions.business.paragraph"
           :article-classlist="descriptions.business.classlist"
+          :article-title="descriptions.business.descriptionArticle.title"
+          :article-heading="descriptions.business.descriptionArticle.heading"
+          :article-paragraph="
+            descriptions.business.descriptionArticle.paragraph
+          "
         />
       </div>
     </section>
@@ -26,9 +53,11 @@
 
 <script>
 import DescriptionArticle from "./DescriptionArticle.vue";
+import CardArticle from "./CardArticle.vue";
 export default {
   name: "MainSection",
   components: {
+    CardArticle,
     DescriptionArticle,
   },
   data() {
@@ -36,19 +65,53 @@ export default {
       descriptions: {
         network: {
           classlist: "article-light",
-          title: "About the network",
-          heading: "<span class='highlight'>The</span> Company",
-          paragraph:
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, iste. Aliquam nulla distinctio ipsa dolor voluptate quam quasi blanditiis quisquam minima quos facere excepturi unde, aspernatur rerum mollitia vero debitis. Quidem dolores odio doloremque, quod natus sint blanditiis obcaecati dolor, eum, similique iusto nulla qui vitae iure sequi aperiam beatae delectus exercitationem.",
-          secondParagraph:
-            "Quidem dolores odio doloremque, quod natus sint blanditiis obcaecati dolor, eum, similique iusto nulla qui vitae iure sequi aperiam beatae delectus exercitationem.",
+          descriptionArticle: {
+            title: "About the network",
+            heading: "<span class='highlight'>The</span> Company",
+            paragraph:
+              "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, iste. Aliquam nulla distinctio ipsa dolor voluptate quam quasi blanditiis quisquam minima quos facere excepturi unde, aspernatur rerum mollitia vero debitis.",
+            secondParagraph:
+              "Quidem dolores odio doloremque, quod natus sint blanditiis obcaecati dolor, eum, similique iusto nulla qui vitae iure sequi aperiam beatae delectus exercitationem.",
+          },
+          cardArticles: [
+            {
+              icon: "bi bi-award h4 me-2",
+              heading: "Tradition",
+              headingClasslist: "d-inline-block",
+              paragraph:
+                "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            },
+            {
+              icon: "bi bi-file-earmark-lock h4 me-2",
+              heading: "Security",
+              headingClasslist: "d-inline-block",
+              paragraph:
+                "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            },
+            {
+              icon: "bi bi-pencil-square h4 me-2",
+              heading: "Certificate",
+              headingClasslist: "d-inline-block",
+              paragraph:
+                "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            },
+            {
+              icon: "bi bi-mortarboard h4 me-2",
+              heading: "Expertise",
+              headingClasslist: "d-inline-block",
+              paragraph:
+                "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            },
+          ],
         },
         business: {
           classlist: "article-dark",
-          title: "Our business areas",
-          heading: "Excellence in <span class='highlight'>Services</span>",
-          paragraph:
-            "We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of experienced and renowned professionals. These are some options that you can hire.",
+          descriptionArticle: {
+            title: "Our business areas",
+            heading: "Excellence in <span class='highlight'>Services</span>",
+            paragraph:
+              "We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of experienced and renowned professionals. These are some options that you can hire.",
+          },
         },
         process: {
           classlist: "article-dark",
