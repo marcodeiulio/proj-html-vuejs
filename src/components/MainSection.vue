@@ -36,29 +36,20 @@
         </div>
       </div>
     </section>
-    <section id="business">
-      <div class="container section-padding">
-        <description-article
-          :article-classlist="descriptions.business.classlist"
-          :article-title="descriptions.business.descriptionArticle.title"
-          :article-heading="descriptions.business.descriptionArticle.heading"
-          :article-paragraph="
-            descriptions.business.descriptionArticle.paragraph
-          "
-        />
-      </div>
-    </section>
+    <business-section :business="descriptions.business" />
   </main>
 </template>
 
 <script>
 import DescriptionArticle from "./DescriptionArticle.vue";
 import CardArticle from "./CardArticle.vue";
+import BusinessSection from "./BusinessSection.vue";
 export default {
   name: "MainSection",
   components: {
     CardArticle,
     DescriptionArticle,
+    BusinessSection,
   },
   data() {
     return {
@@ -112,6 +103,50 @@ export default {
             paragraph:
               "We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of experienced and renowned professionals. These are some options that you can hire.",
           },
+          cardArticles: [
+            {
+              icon: "bi bi-diagram-2 h3 d-block",
+              heading: "Audit & Assurance",
+              headingClasslist: "d-inline-block",
+              paragraph:
+                "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            },
+            {
+              icon: "bi bi-briefcase h3 d-block",
+              heading: "Financial Advisory",
+              headingClasslist: "d-inline-block",
+              paragraph:
+                "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            },
+            {
+              icon: "bi bi-bar-chart h3 d-block",
+              heading: "Analytics and M&A",
+              headingClasslist: "d-inline-block",
+              paragraph:
+                "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            },
+            {
+              icon: "bi bi-cart2 h3 d-block",
+              heading: "Middle Marketing",
+              headingClasslist: "d-inline-block",
+              paragraph:
+                "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            },
+            {
+              icon: "bi bi-globe h3 d-block",
+              heading: "Legal Consulting",
+              headingClasslist: "d-inline-block",
+              paragraph:
+                "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            },
+            {
+              icon: "bi bi-inbox h3 d-block",
+              heading: "Regulatory Risk",
+              headingClasslist: "d-inline-block",
+              paragraph:
+                "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+            },
+          ],
         },
         process: {
           classlist: "article-dark",
@@ -152,8 +187,5 @@ export default {
 
 #network {
   background-color: $bg-darker;
-}
-#business {
-  background-color: $bg-light;
 }
 </style>
