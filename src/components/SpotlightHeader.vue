@@ -13,7 +13,11 @@
       </div>
     </section>
     <section id="spotlight">
-      <nav id="header-nav" class="py-3 font-light">
+      <nav
+        id="header-nav"
+        class="py-4 font-light d-flex align-items-center container"
+      >
+        <nexgen-logo class="flex-shrink-0" />
         <ul class="nav container justify-content-end align-items-center">
           <li class="nav-item" v-for="(nav, index) in headerNavs" :key="index">
             <a class="nav-link" href="#">{{ nav }}</a>
@@ -34,9 +38,11 @@
 
 <script>
 import GetInTouch from "./GetInTouch.vue";
+import NexgenLogo from "./NexgenLogo.vue";
 export default {
   name: "SpotlightHeader",
   components: {
+    NexgenLogo,
     GetInTouch,
   },
   props: {
@@ -56,7 +62,7 @@ export default {
 }
 #header-nav {
   li {
-    margin-left: 30px;
+    margin-left: 20px;
   }
   a {
     color: $nexgrey-dark;

@@ -3,7 +3,13 @@
 }
 
 //# Tags
+h1 {
+	color: $nexgrey-dark;
+	font-weight: $heading-1-weight;
+	font-size: $heading-1-size;
+}
 h2 {
+	color: $nexgrey-dark;
 	font-weight: $heading-2-weight;
 	font-size: $heading-2-size;
 	font-family: 'Montserrat', sans-serif;
