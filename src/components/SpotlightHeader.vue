@@ -2,13 +2,28 @@
   <header>
     <section id="header-contacts" class="py-3 font-lighter">
       <div class="container d-flex justify-content-between align-items-center">
-        <p class="m-0">Open Hours</p>
+        <p class="m-0">
+          <i class="fa-solid fa-clock"></i>
+          Open Hours: Mon - Sat - 9:00 - 18:00
+        </p>
         <ul class="m-0 list-inline d-flex justify-content-around">
-          <li>phone number</li>
-          <li>hello@nexgen.com</li>
-          <li>icon</li>
-          <li>icon</li>
-          <li>icon</li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            +1 (305) 1234-5678
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            hello@nexgen.com
+          </li>
+          <li>
+            <i class="fa-brands fa-facebook-f"></i>
+          </li>
+          <li>
+            <i class="fa-brands fa-twitter"></i>
+          </li>
+          <li>
+            <i class="fa-brands fa-linkedin-in"></i>
+          </li>
         </ul>
       </div>
     </section>

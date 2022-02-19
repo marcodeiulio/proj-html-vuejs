@@ -32,38 +32,37 @@
 	padding-bottom: 150px;
 }
 
-.article-light {
-	color: white;
+.article-light,
+.article-dark {
 	margin-bottom: 2.5rem;
 
 	.highlight {
-		background-color: $highlight;
 		padding: 0 10px;
 		border-radius: 5px;
-	}
-	p {
-		color: $par-light;
+		background-color: $highlight;
 	}
 	i {
 		color: $nexgreen-dark;
 	}
 }
 
+.article-light {
+	color: white;
+
+	p {
+		color: $par-light;
+	}
+}
+
 .article-dark {
 	color: $nexgrey-dark;
-	margin-bottom: 2.5rem;
 
 	.highlight {
 		color: $nexgreen-dark;
-		background-color: $highlight;
-		padding: 0 10px;
-		border-radius: 5px;
 	}
 	p {
 		color: $par-dark;
 	}
-	i {
-		color: $nexgreen-dark;
-	}
+
 }
 
