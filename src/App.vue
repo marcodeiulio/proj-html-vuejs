@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <SpotlightHeader />
+    <SpotlightHeader :headerNavs="headerNavs" />
     <MainSection />
   </div>
 </template>
@@ -13,6 +13,11 @@ export default {
   components: {
     SpotlightHeader,
     MainSection,
+  },
+  data() {
+    return {
+      headerNavs: ["home", "about", "services", "process", "team", "blog"],
+    };
   },
 };
 </script>

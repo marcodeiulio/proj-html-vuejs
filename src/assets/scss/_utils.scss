@@ -1,11 +1,15 @@
 @import './vars';
 
 //# Classes
+.font-lighter {
+	font-weight: $lighter-weight;
+}
 .font-light {
 	font-weight: $light-weight;
 }
 
 .button {
+	font-weight: $regular-weight;
 	padding: .7rem 1.1rem;
 	border-radius: 5px;
 	text-decoration: none;

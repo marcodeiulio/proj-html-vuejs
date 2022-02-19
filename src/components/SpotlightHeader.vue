@@ -1,6 +1,6 @@
 <template>
   <header>
-    <section id="header-contacts" class="py-3 font-light">
+    <section id="header-contacts" class="py-3 font-lighter">
       <div class="container d-flex justify-content-between align-items-center">
         <p class="m-0">Open Hours</p>
         <ul class="m-0 list-inline d-flex justify-content-around">
@@ -13,25 +13,10 @@
       </div>
     </section>
     <section id="spotlight">
-      <nav id="header-nav" class="py-3">
+      <nav id="header-nav" class="py-3 font-light">
         <ul class="nav container justify-content-end align-items-center">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Process</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
+          <li class="nav-item" v-for="(nav, index) in headerNavs" :key="index">
+            <a class="nav-link" href="#">{{ nav }}</a>
           </li>
           <li class="nav-item">
             <a class="button button-solid" href="#" role="button"
@@ -53,6 +38,9 @@ export default {
   name: "SpotlightHeader",
   components: {
     GetInTouch,
+  },
+  props: {
+    headerNavs: Array,
   },
 };
 </script>
