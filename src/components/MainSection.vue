@@ -3,6 +3,7 @@
     <network-section :network="descriptions.network" />
     <business-section :business="descriptions.business" />
     <process-section :process="descriptions.process" />
+    <team-section :team="descriptions.team" />
   </main>
 </template>
 
@@ -10,12 +11,14 @@
 import NetworkSection from "./NetworkSection.vue";
 import BusinessSection from "./BusinessSection.vue";
 import ProcessSection from "./ProcessSection.vue";
+import TeamSection from "./TeamSection.vue";
 export default {
   name: "MainSection",
   components: {
     NetworkSection,
     BusinessSection,
     ProcessSection,
+    TeamSection,
   },
   data() {
     return {
@@ -157,10 +160,42 @@ export default {
         },
         team: {
           classlist: "article-light",
-          title: "We like what we do",
-          heading: "<span class='highlight'>Team</span> of Experts",
-          paragraph:
-            "Ethics and integrity are the bases on which our professionals build their careers. They are fundamentals that become daily attitudes.",
+          descriptionArticle: {
+            title: "We like what we do",
+            heading: "<span class='highlight'>Team</span> of Experts",
+            paragraph:
+              "Ethics and integrity are the bases on which our professionals build their careers. They are fundamentals that become daily attitudes.",
+          },
+          cardArticles: [
+            {
+              img: "team-1.jpg",
+              heading: "David Cooper",
+              headingClasslist: "d-inline-block",
+              paragraph: "CTO & CO-FOUNDER",
+              brandIcons: true,
+            },
+            {
+              img: "team-3.jpg",
+              heading: "Oliver Jones",
+              headingClasslist: "d-inline-block",
+              paragraph: "CHIEF PROCUREMENT",
+              brandIcons: true,
+            },
+            {
+              img: "team-2.jpg",
+              heading: "Emma Lopez",
+              headingClasslist: "d-inline-block",
+              paragraph: "CHIEF MARKETING",
+              brandIcons: true,
+            },
+            {
+              img: "team-4.jpg",
+              heading: "T. Johnson",
+              headingClasslist: "d-inline-block",
+              paragraph: "CEO & PRESIDENT",
+              brandIcons: true,
+            },
+          ],
         },
         editorial: {
           classlist: "article-dark",

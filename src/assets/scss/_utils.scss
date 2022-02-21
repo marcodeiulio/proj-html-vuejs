@@ -66,3 +66,39 @@
 
 }
 
+.brand-icons {
+	display: flex;
+
+	.icon-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $highlight;
+		height: 35px;
+		width: 35px;
+		border-radius: 50%;
+		margin-right: 5px;
+	}
+}
+
+.quote {
+	background-color: $nexgreen-dark;
+	padding: 35px;
+	border-radius: 5px;
+
+	p {
+		color: $par-light;
+		
+	&.quote-title {
+		font-weight: $heading-4-weight;
+		font-size: $heading-4-size;
+		margin-bottom: $heading-4-margin-b;
+		color: white;
+	}
+	&.quote-author {
+		font-weight: $heading-4-weight;
+		font-size: $heading-5-size;
+		color: white;
+	}
+	}
+}
