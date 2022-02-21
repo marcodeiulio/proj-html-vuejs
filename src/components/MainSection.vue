@@ -2,17 +2,20 @@
   <main>
     <network-section :network="descriptions.network" />
     <business-section :business="descriptions.business" />
+    <process-section :process="descriptions.process" />
   </main>
 </template>
 
 <script>
-import BusinessSection from "./BusinessSection.vue";
 import NetworkSection from "./NetworkSection.vue";
+import BusinessSection from "./BusinessSection.vue";
+import ProcessSection from "./ProcessSection.vue";
 export default {
   name: "MainSection",
   components: {
-    BusinessSection,
     NetworkSection,
+    BusinessSection,
+    ProcessSection,
   },
   data() {
     return {
@@ -113,10 +116,44 @@ export default {
         },
         process: {
           classlist: "article-dark",
-          title: "How it works in practice",
-          heading: "<span class='highlight'>Process</span> Management",
-          paragraph:
-            "We work with innovative methodologies to ensure that the entire reformatting process is done from start to finish as planned.",
+          descriptionArticle: {
+            title: "How it works in practice",
+            heading: "<span class='highlight'>Process</span> Management",
+            paragraph:
+              "We work with innovative methodologies to ensure that the entire reformatting process is done from start to finish as planned.",
+          },
+          cardArticles: [
+            {
+              progNumber: "01",
+              heading: "Collection of information",
+              headingClasslist: "",
+              paragraph: "Lorem ipsum dolor sit amet consectetur.",
+            },
+            {
+              progNumber: "02",
+              heading: "Strategic planning",
+              headingClasslist: "",
+              paragraph: "Lorem ipsum dolor sit amet consectetur.",
+            },
+            {
+              progNumber: "03",
+              heading: "Assignment of responsibilities",
+              headingClasslist: "",
+              paragraph: "Lorem ipsum dolor sit amet consectetur.",
+            },
+            {
+              progNumber: "04",
+              heading: "Formatting process",
+              headingClasslist: "",
+              paragraph: "Lorem ipsum dolor sit amet consectetur.",
+            },
+            {
+              progNumber: "05",
+              heading: "Continuity formalization",
+              headingClasslist: "",
+              paragraph: "Lorem ipsum dolor sit amet consectetur.",
+            },
+          ],
         },
         team: {
           classlist: "article-light",

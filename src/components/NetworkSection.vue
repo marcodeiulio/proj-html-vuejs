@@ -54,6 +54,6 @@ export default {
 @import "../assets/scss/_vars.scss";
 
 section {
-  background-color: black;
+  background-color: $bg-darker;
 }
 </style>
