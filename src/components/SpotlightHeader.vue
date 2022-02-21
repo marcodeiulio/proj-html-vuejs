@@ -45,7 +45,7 @@
         </ul>
       </nav>
       <div class="container wrapper">
-        <GetInTouch />
+        <get-in-touch />
       </div>
     </section>
   </header>

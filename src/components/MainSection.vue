@@ -1,6 +1,6 @@
 <template>
   <main>
-    <NetworkSection :network="descriptions.network" />
+    <network-section :network="descriptions.network" />
     <business-section :business="descriptions.business" />
   </main>
 </template>

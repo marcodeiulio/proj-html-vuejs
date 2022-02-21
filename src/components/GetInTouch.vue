@@ -7,16 +7,19 @@
         <h2>Insurance Consulting</h2>
         <div class="row g-3">
           <div class="col-5">
-            <InputField :input-type="'text'" :input-placeholder="'Name'" />
+            <input-field :input-type="'text'" :input-placeholder="'Name'" />
           </div>
           <div class="col-5">
-            <InputField :input-type="'email'" :input-placeholder="'Email'" />
+            <input-field :input-type="'email'" :input-placeholder="'Email'" />
           </div>
           <div class="col-5">
-            <InputField :input-type="'tel'" :input-placeholder="'Phone'" />
+            <input-field :input-type="'tel'" :input-placeholder="'Phone'" />
           </div>
           <div class="col-5">
-            <InputField :input-type="'text'" :input-placeholder="'More Info'" />
+            <input-field
+              :input-type="'text'"
+              :input-placeholder="'More Info'"
+            />
           </div>
           <div class="col-10 py-2">
             <a href="#" class="button button-solid">Get in touch</a>

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <SpotlightHeader :headerNavs="headerNavs" />
-    <MainSection />
+    <spotlight-header :header-navs="headerNavs" />
+    <main-section />
   </div>
 </template>
 
