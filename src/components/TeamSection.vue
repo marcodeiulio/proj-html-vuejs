@@ -1,5 +1,5 @@
 <template>
-  <section id="business">
+  <section id="team">
     <div id="line"></div>
 
     <div class="container section-padding">
@@ -64,7 +64,7 @@
 import DescriptionArticle from "./DescriptionArticle.vue";
 import CardArticle from "./CardArticle.vue";
 export default {
-  name: "Section",
+  name: "TeamSection",
   components: {
     DescriptionArticle,
     CardArticle,
@@ -78,7 +78,7 @@ export default {
 <style scoped lang="scss">
 @import "../assets/scss/_vars.scss";
 
-section {
+#team {
   background-color: $bg-darker;
 
   figure {

@@ -4,6 +4,7 @@
     <business-section :business="descriptions.business" />
     <process-section :process="descriptions.process" />
     <team-section :team="descriptions.team" />
+    <editorial-section :editorial="descriptions.editorial" />
   </main>
 </template>
 
@@ -12,6 +13,7 @@ import NetworkSection from "./NetworkSection.vue";
 import BusinessSection from "./BusinessSection.vue";
 import ProcessSection from "./ProcessSection.vue";
 import TeamSection from "./TeamSection.vue";
+import EditorialSection from "./EditorialSection.vue";
 export default {
   name: "MainSection",
   components: {
@@ -19,6 +21,7 @@ export default {
     BusinessSection,
     ProcessSection,
     TeamSection,
+    EditorialSection,
   },
   data() {
     return {
@@ -199,10 +202,26 @@ export default {
         },
         editorial: {
           classlist: "article-dark",
-          title: "Our editorial content",
-          heading: "Lates <span class='highlight'>News</span>",
-          paragraph:
-            "Every week we publish content about what is best in the business world.",
+          descriptionArticle: {
+            title: "Our editorial content",
+            heading: "Lates <span class='highlight'>News</span>",
+            paragraph:
+              "Every week we publish content about what is best in the business world.",
+          },
+          cardArticles: [
+            {
+              img: "news-1.jpg",
+              heading: "Increasing creativity is possible for everyone",
+            },
+            {
+              img: "news-2.jpg",
+              heading: "Because market research is part of the business plan",
+            },
+            {
+              img: "news-3.jpg",
+              heading: "Working from home is now a trend",
+            },
+          ],
         },
         newsletter: {
           classlist: "article-light",

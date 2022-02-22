@@ -1,6 +1,6 @@
 <template>
   <article :class="[cardClasslist]">
-    <i :class="[cardIcon]"></i>
+    <i v-if="cardIcon" :class="[cardIcon]"></i>
     <h4 :class="[cardHeadingClasslist]">{{ cardHeading }}</h4>
     <p>{{ cardParagraph }}</p>
     <div v-if="brandIcons" class="brand-icons">
