@@ -20,7 +20,10 @@
               :key="index"
             >
               <figure class="me-4">
-                <img :src="require(`../assets/img/${card.img}`)" alt="img" />
+                <img
+                  :src="require(`../assets/img/${card.img}`)"
+                  :alt="card.heading"
+                />
               </figure>
               <div>
                 <card-article

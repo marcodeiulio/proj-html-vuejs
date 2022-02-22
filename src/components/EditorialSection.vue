@@ -23,7 +23,10 @@
           :key="index"
         >
           <div class="bg-card">
-            <img :src="require(`../assets/img/${card.img}`)" alt="img" />
+            <img
+              :src="require(`../assets/img/${card.img}`)"
+              :alt="`thumbnail: ${card.heading}`"
+            />
             <div class="dimmer">
               <card-article
                 class="card-article position-relative px-5 text-center"
@@ -76,7 +79,7 @@ export default {
     }
 
     .dimmer {
-      background-color: rgba(0, 0, 0, 0.281);
+      background-color: rgba(0, 0, 0, 0.438);
       position: relative;
       width: 100%;
       height: 100%;
