@@ -1,5 +1,7 @@
 <template>
-  <h1 :class="[colorVersion]"><span class="highlight">N E X</span> G E N</h1>
+  <h1 :class="[colorVersion]" role="button">
+    <span class="highlight">N E X</span> G E N
+  </h1>
 </template>
 
 <script>

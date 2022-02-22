@@ -97,5 +97,9 @@ export default {
 #spotlight {
   background-image: url(../assets/img/bg-6.jpg);
   background-position: center;
+
+  li:hover a {
+    color: $nexgreen-dark;
+  }
 }
 </style>

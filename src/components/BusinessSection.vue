@@ -68,6 +68,7 @@ export default {
     .arrow {
       right: 30px;
       color: #82c1c1;
+      cursor: pointer;
     }
   }
 }

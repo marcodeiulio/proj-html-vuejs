@@ -23,12 +23,39 @@
 .button-solid {
 	color: #fff !important;
 	background-color: $nexgreen-dark;
+	transition: filter .5s, color .5s;
+
+	&:hover {
+		color: black !important;
+		filter: drop-shadow(0 0 0.3rem $nexgreen-dark);
+		transition: filter .5s, color .5s;
+	}
 }
 
 .button-transparent {
 	color: $nexgreen-dark;
 	background-color: transparent;
 	border: 1px solid $nexgreen-dark;
+	transition: border-radius .5s, color .5s;
+
+	&:hover {
+		color: black !important;
+		border-radius: 25px;
+		transition: border-radius .5s, color .5s;
+	}
+}
+
+.button-transparent-dark {
+	color: $header-light;
+	background-color: transparent;
+	border: 1px solid $nexgreen-light;
+	transition: border-radius .5s, color .5s;
+
+	&:hover {
+		color: $nexgreen-light;
+		border-radius: 25px;
+		transition: border-radius .5s, color .5s;
+	}
 }
 
 .section-padding {

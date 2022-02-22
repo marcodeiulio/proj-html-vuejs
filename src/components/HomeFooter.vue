@@ -13,7 +13,7 @@
               <li class="mb-3" v-html="contacts.email"></li>
               <li class="mb-3" v-html="contacts.address"></li>
             </ul>
-            <a href="#" class="button button-transparent">Get in Touch</a>
+            <a href="#" class="button button-transparent-dark">Get in Touch</a>
           </div>
           <div
             class="col-3 p-3"
@@ -86,12 +86,13 @@ export default {
     list-style-type: none;
     padding: 0;
 
+    li:hover a {
+      color: $nexgreen-light;
+    }
+
     a {
       text-decoration: none;
     }
-  }
-  .button {
-    color: $header-light;
   }
 }
 #lower-footer {
