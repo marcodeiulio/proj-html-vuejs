@@ -1,7 +1,5 @@
 <template>
   <section id="editorial">
-    <div id="line"></div>
-
     <div class="container section-padding">
       <div class="row">
         <div class="col-8">

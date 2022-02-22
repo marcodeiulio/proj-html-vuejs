@@ -5,6 +5,7 @@
     <process-section :process="descriptions.process" />
     <team-section :team="descriptions.team" />
     <editorial-section :editorial="descriptions.editorial" />
+    <newsletter-section :newsletter="descriptions.newsletter" />
   </main>
 </template>
 
@@ -14,6 +15,7 @@ import BusinessSection from "./BusinessSection.vue";
 import ProcessSection from "./ProcessSection.vue";
 import TeamSection from "./TeamSection.vue";
 import EditorialSection from "./EditorialSection.vue";
+import NewsletterSection from "./NewsletterSection.vue";
 export default {
   name: "MainSection",
   components: {
@@ -22,6 +24,7 @@ export default {
     ProcessSection,
     TeamSection,
     EditorialSection,
+    NewsletterSection,
   },
   data() {
     return {
@@ -225,10 +228,12 @@ export default {
         },
         newsletter: {
           classlist: "article-light",
-          title: "Newsletter",
-          heading: "<span class='highlight'>Know</span> First",
-          paragraph:
-            "Follow closely and receive content about our company and the news of the current market.",
+          descriptionArticle: {
+            title: "Newsletter",
+            heading: "<span class='highlight'>Know</span> First",
+            paragraph:
+              "Follow closely and receive content about our company and the news of the current market.",
+          },
         },
       },
     };
