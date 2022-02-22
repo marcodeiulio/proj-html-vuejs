@@ -6,15 +6,17 @@
           <i class="fa-solid fa-clock"></i>
           Open Hours: Mon - Sat - 9:00 - 18:00
         </p>
-        <ul class="m-0 list-inline d-flex justify-content-around">
-          <li>
-            <i class="fa-solid fa-phone"></i>
-            +1 (305) 1234-5678
-          </li>
-          <li>
-            <i class="fa-solid fa-envelope"></i>
-            hello@nexgen.com
-          </li>
+        <ul
+          class="
+            m-0
+            list-inline
+            d-flex
+            justify-content-around
+            align-items-center
+          "
+        >
+          <li v-html="contacts.phoneNumber"></li>
+          <li v-html="contacts.email"></li>
           <li>
             <i class="fa-brands fa-facebook-f"></i>
           </li>
@@ -62,6 +64,7 @@ export default {
   },
   props: {
     headerNavs: Array,
+    contacts: Object,
   },
 };
 </script>
@@ -73,6 +76,9 @@ export default {
   background-color: $nexgrey-dark;
   li {
     margin-right: 1.5em;
+    p {
+      margin: 200px;
+    }
   }
 }
 #header-nav {

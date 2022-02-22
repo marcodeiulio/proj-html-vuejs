@@ -9,9 +9,9 @@
               A Functional HTML Template for Corporate & Business.
             </p>
             <ul class="mb-5">
-              <li v-html="contacts.phoneNumber"></li>
-              <li v-html="contacts.email"></li>
-              <li v-html="contacts.address"></li>
+              <li class="mb-3" v-html="contacts.phoneNumber"></li>
+              <li class="mb-3" v-html="contacts.email"></li>
+              <li class="mb-3" v-html="contacts.address"></li>
             </ul>
             <a href="#" class="button button-transparent">Get in Touch</a>
           </div>
