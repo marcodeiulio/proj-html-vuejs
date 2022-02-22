@@ -13,13 +13,23 @@
         <div class="col-5">
           <div class="row gy-3">
             <div class="col-12">
-              <input-field :input-type="'text'" :input-placeholder="'Name'" />
+              <input-field
+                @input-value="userName += $event"
+                :input-type="'text'"
+                :input-placeholder="'Name'"
+              />
             </div>
             <div class="col-12">
-              <input-field :input-type="'email'" :input-placeholder="'Email'" />
+              <input-field
+                @input-value="userEmail += $event"
+                :input-type="'email'"
+                :input-placeholder="'Email'"
+              />
             </div>
             <div class="col-4 mt-4">
-              <a href="#" class="button button-solid">Subscribe</a>
+              <span @click="printForm" class="button button-solid"
+                >Subscribe</span
+              >
             </div>
           </div>
         </div>
@@ -39,6 +49,18 @@ export default {
   },
   props: {
     newsletter: Object,
+  },
+  data() {
+    return {
+      userName: "",
+      userEmail: "",
+    };
+  },
+  methods: {
+    printForm() {
+      console.log("User Name: " + this.userName);
+      console.log("User Email: " + this.userEmail);
+    },
   },
 };
 </script>

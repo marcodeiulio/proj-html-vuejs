@@ -7,22 +7,37 @@
         <h2>Insurance Consulting</h2>
         <div class="row g-3">
           <div class="col-5">
-            <input-field :input-type="'text'" :input-placeholder="'Name'" />
-          </div>
-          <div class="col-5">
-            <input-field :input-type="'email'" :input-placeholder="'Email'" />
-          </div>
-          <div class="col-5">
-            <input-field :input-type="'tel'" :input-placeholder="'Phone'" />
+            <input-field
+              @input-value="userName += $event"
+              :input-type="'text'"
+              :input-placeholder="'Name'"
+            />
           </div>
           <div class="col-5">
             <input-field
+              @input-value="userEmail += $event"
+              :input-type="'email'"
+              :input-placeholder="'Email'"
+            />
+          </div>
+          <div class="col-5">
+            <input-field
+              @input-value="userPhone += $event"
+              :input-type="'tel'"
+              :input-placeholder="'Phone'"
+            />
+          </div>
+          <div class="col-5">
+            <input-field
+              @input-value="userInfo += $event"
               :input-type="'text'"
               :input-placeholder="'More Info'"
             />
           </div>
           <div class="col-10 py-2">
-            <a href="#" class="button button-solid">Get in touch</a>
+            <span class="button button-solid me-5" @click="printForm"
+              >Get in touch</span
+            >
             <a href="#" class="button button-transparent">read more</a>
           </div>
         </div>
@@ -37,6 +52,22 @@ export default {
   name: "GetInTouch",
   components: {
     InputField,
+  },
+  data() {
+    return {
+      userName: "",
+      userEmail: "",
+      userPhone: "",
+      userInfo: "",
+    };
+  },
+  methods: {
+    printForm() {
+      console.log("User Name: " + this.userName);
+      console.log("User Email: " + this.userEmail);
+      console.log("User Phone: " + this.userPhone);
+      console.log("User Info: " + this.userInfo);
+    },
   },
 };
 </script>

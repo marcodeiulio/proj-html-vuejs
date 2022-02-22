@@ -3,6 +3,8 @@
     :type="inputType"
     class="p-3 font-light form-control"
     :placeholder="inputPlaceholder"
+    v-model="model"
+    @change="emitValue"
   />
 </template>
 
@@ -12,6 +14,16 @@ export default {
   props: {
     inputPlaceholder: String,
     inputType: String,
+  },
+  data() {
+    return {
+      model: "",
+    };
+  },
+  methods: {
+    emitValue() {
+      this.$emit("input-value", this.model);
+    },
   },
 };
 </script>
