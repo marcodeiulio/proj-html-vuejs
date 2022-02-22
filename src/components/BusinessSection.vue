@@ -11,13 +11,16 @@
           />
         </div>
       </div>
-      <div class="row g-4 justify-content-center">
+      <div class="row g-5 justify-content-center">
         <div
           class="outer-card col-4"
           v-for="(card, index) in business.cardArticles"
           :key="index"
         >
-          <div class="inner-card p-4">
+          <div class="inner-card px-5 py-4 position-relative d-inli">
+            <span class="arrow text-green position-absolute h3">
+              <i class="bi bi-arrow-right-short"></i>
+            </span>
             <card-article
               :card-classlist="business.classlist"
               :card-heading="card.heading"
@@ -56,6 +59,11 @@ export default {
   .inner-card {
     background-color: #fff;
     border-radius: 10px;
+
+    .arrow {
+      right: 30px;
+      color: #82c1c1;
+    }
   }
 }
 </style>
