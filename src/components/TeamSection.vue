@@ -1,7 +1,5 @@
 <template>
   <section id="team">
-    <div id="line"></div>
-
     <div class="container section-padding">
       <div class="row">
         <div class="col-8">
@@ -38,7 +36,10 @@
           </div>
         </div>
         <div class="col-4 pe-5">
-          <div class="quote mt-5">
+          <div class="quote mt-5 position-relative">
+            <span class="quote-icon position-absolute h3">
+              <i class="bi bi-quote"></i>
+            </span>
             <p class="quote-title">President Speech</p>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero
@@ -88,6 +89,12 @@ export default {
       max-width: 100%;
       border-radius: 5px;
     }
+  }
+
+  .quote-icon {
+    bottom: 5px;
+    right: 25px;
+    color: $highlight-dark;
   }
 }
 </style>
