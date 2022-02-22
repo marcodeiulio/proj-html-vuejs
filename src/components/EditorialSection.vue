@@ -10,6 +10,11 @@
             :article-paragraph="editorial.descriptionArticle.paragraph"
           />
         </div>
+        <div class="col-4 d-flex justify-content-end align-items-end mb-5">
+          <div>
+            <a href="#" class="button button-solid">See all</a>
+          </div>
+        </div>
       </div>
       <div class="row h-100">
         <div
