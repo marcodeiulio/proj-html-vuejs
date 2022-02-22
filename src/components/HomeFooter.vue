@@ -44,7 +44,9 @@
           <div class="col-6 text-center">
             <p>
               &copy; 2020 NEXGEN is Proudly Powered by
-              <span class="text-green">Codings</span>.
+              <a href="https://nexgen.codings.dev/" class="text-green"
+                >Codings</a
+              >.
             </p>
           </div>
         </div>
@@ -88,10 +90,12 @@ export default {
 
     li:hover a {
       color: $nexgreen-light;
+      transition: color 0.4s;
     }
 
     a {
       text-decoration: none;
+      transition: color 0.4s;
     }
   }
 }
@@ -100,6 +104,16 @@ export default {
 
   p {
     margin: 0;
+  }
+
+  .text-green {
+    text-decoration: none;
+    transition: color 0.4s;
+
+    &:hover {
+      color: $nexgreen-light;
+      transition: color 0.4s;
+    }
   }
 }
 </style>

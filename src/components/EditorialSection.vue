@@ -70,6 +70,13 @@ export default {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    transition: transform 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: transform 0.5s;
+    }
 
     img {
       pointer-events: none;
