@@ -36,8 +36,8 @@
 </template>
 
 <script>
-import DescriptionArticle from "./DescriptionArticle.vue";
-import CardArticle from "./CardArticle.vue";
+import DescriptionArticle from "../util_components/DescriptionArticle.vue";
+import CardArticle from "../util_components/CardArticle.vue";
 export default {
   name: "BusinessSection",
   components: {
@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/scss/_vars.scss";
+@import "../../assets/scss/_vars.scss";
 
 section {
   background-color: $bg-darker;

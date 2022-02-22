@@ -21,7 +21,7 @@
             >
               <figure class="me-4">
                 <img
-                  :src="require(`../assets/img/${card.img}`)"
+                  :src="require(`../../assets/img/${card.img}`)"
                   :alt="card.heading"
                 />
               </figure>
@@ -65,8 +65,8 @@
 </template>
 
 <script>
-import DescriptionArticle from "./DescriptionArticle.vue";
-import CardArticle from "./CardArticle.vue";
+import DescriptionArticle from "../util_components/DescriptionArticle.vue";
+import CardArticle from "../util_components/CardArticle.vue";
 export default {
   name: "TeamSection",
   components: {
@@ -80,7 +80,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/scss/_vars.scss";
+@import "../../assets/scss/_vars.scss";
 
 #team {
   background-color: $bg-darker;

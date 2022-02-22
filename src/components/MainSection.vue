@@ -10,12 +10,12 @@
 </template>
 
 <script>
-import NetworkSection from "./NetworkSection.vue";
-import BusinessSection from "./BusinessSection.vue";
-import ProcessSection from "./ProcessSection.vue";
-import TeamSection from "./TeamSection.vue";
-import EditorialSection from "./EditorialSection.vue";
-import NewsletterSection from "./NewsletterSection.vue";
+import NetworkSection from "./section_components/NetworkSection.vue";
+import BusinessSection from "./section_components/BusinessSection.vue";
+import ProcessSection from "./section_components/ProcessSection.vue";
+import TeamSection from "./section_components/TeamSection.vue";
+import EditorialSection from "./section_components/EditorialSection.vue";
+import NewsletterSection from "./section_components/NewsletterSection.vue";
 export default {
   name: "MainSection",
   components: {

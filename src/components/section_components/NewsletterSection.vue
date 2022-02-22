@@ -39,8 +39,8 @@
 </template>
 
 <script>
-import DescriptionArticle from "./DescriptionArticle.vue";
-import InputField from "./InputField.vue";
+import DescriptionArticle from "../util_components/DescriptionArticle.vue";
+import InputField from "../util_components/InputField.vue";
 export default {
   name: "NewsletterSection",
   components: {
@@ -74,10 +74,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/scss/_vars.scss";
+@import "../../assets/scss/_vars.scss";
 
 #newsletter {
-  background-image: url(../assets/img/bg-1.jpg);
+  background-image: url(../../assets/img/bg-1.jpg);
   background-position: center;
   background-repeat: no-repeat;
 }

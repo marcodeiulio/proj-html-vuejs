@@ -24,7 +24,7 @@
         >
           <div class="bg-card">
             <img
-              :src="require(`../assets/img/${card.img}`)"
+              :src="require(`../../assets/img/${card.img}`)"
               :alt="`thumbnail: ${card.heading}`"
             />
             <div class="dimmer">
@@ -43,8 +43,8 @@
 </template>
 
 <script>
-import DescriptionArticle from "./DescriptionArticle.vue";
-import CardArticle from "./CardArticle.vue";
+import DescriptionArticle from "../util_components/DescriptionArticle.vue";
+import CardArticle from "../util_components/CardArticle.vue";
 export default {
   name: "EditorialSection",
   components: {
@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/scss/_vars.scss";
+@import "../../assets/scss/_vars.scss";
 
 #editorial {
   background-color: $bg-lighter;

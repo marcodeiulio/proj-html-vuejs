@@ -55,7 +55,7 @@
 
 <script>
 import GetInTouch from "./GetInTouch.vue";
-import NexgenLogo from "./NexgenLogo.vue";
+import NexgenLogo from "./util_components/NexgenLogo.vue";
 export default {
   name: "SpotlightHeader",
   components: {

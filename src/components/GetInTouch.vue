@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import InputField from "./InputField.vue";
+import InputField from "./util_components/InputField.vue";
 export default {
   name: "GetInTouch",
   components: {

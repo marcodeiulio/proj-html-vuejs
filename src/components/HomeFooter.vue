@@ -56,7 +56,7 @@
 </template>
 
 <script>
-import NexgenLogo from "./NexgenLogo.vue";
+import NexgenLogo from "./util_components/NexgenLogo.vue";
 export default {
   name: "HomeFooter",
   components: {
