@@ -8,6 +8,10 @@
 	font-weight: $light-weight;
 }
 
+.text-green {
+	color: $nexgreen-dark;
+}
+
 .button {
 	font-weight: $regular-weight;
 	padding: .7rem 1.1rem;
@@ -17,7 +21,7 @@
 }
 
 .button-solid {
-	color: white !important;
+	color: #fff !important;
 	background-color: $nexgreen-dark;
 }
 
@@ -101,4 +105,10 @@
 		color: white;
 	}
 	}
+}
+
+.info-par {
+	color: $par-light;
+	font-weight: $par-weight;
+	font-size: $par-size;
 }

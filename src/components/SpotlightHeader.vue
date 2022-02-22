@@ -32,7 +32,7 @@
         id="header-nav"
         class="py-4 font-light d-flex align-items-center container"
       >
-        <nexgen-logo class="flex-shrink-0" />
+        <nexgen-logo class="flex-shrink-0" :colorVersion="'dark'" />
         <ul class="nav container justify-content-end align-items-center">
           <li class="nav-item" v-for="(nav, index) in headerNavs" :key="index">
             <a class="nav-link" href="#">{{ nav }}</a>

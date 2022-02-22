@@ -1,15 +1,26 @@
 <template>
-  <h1><span class="highlight">N E X</span> G E N</h1>
+  <h1 :class="[colorVersion]"><span class="highlight">N E X</span> G E N</h1>
 </template>
 
 <script>
 export default {
   name: "NexgenLogo",
+  props: {
+    colorVersion: String,
+  },
 };
 </script>
 
 <style scoped lang="scss">
 @import "../assets/scss/_vars.scss";
+.light {
+  color: $par-light;
+}
+
+.dark {
+  color: #21333e;
+}
+
 .highlight {
   color: $nexgreen-light;
   background-color: $highlight;
