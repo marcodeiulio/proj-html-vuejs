@@ -8,28 +8,28 @@
         <div class="row g-3">
           <div class="col-5">
             <input-field
-              @input-value="userName += $event"
+              @input-value="userName += $event.trim()"
               :input-type="'text'"
               :input-placeholder="'Name'"
             />
           </div>
           <div class="col-5">
             <input-field
-              @input-value="userEmail += $event"
+              @input-value="userEmail += $event.trim()"
               :input-type="'email'"
               :input-placeholder="'Email'"
             />
           </div>
           <div class="col-5">
             <input-field
-              @input-value="userPhone += $event"
+              @input-value="userPhone += $event.trim()"
               :input-type="'tel'"
               :input-placeholder="'Phone'"
             />
           </div>
           <div class="col-5">
             <input-field
-              @input-value="userInfo += $event"
+              @input-value="userInfo += $event.trim()"
               :input-type="'text'"
               :input-placeholder="'More Info'"
             />
@@ -64,9 +64,19 @@ export default {
   methods: {
     printForm() {
       console.log("User Name: " + this.userName);
-      console.log("User Email: " + this.userEmail);
+      if (
+        !this.userEmail.includes("@") ||
+        !this.userEmail.includes(".") ||
+        this.userEmail.includes(" ")
+      )
+        console.log("Invalid Email Address");
+      else console.log("User Email: " + this.userEmail);
       console.log("User Phone: " + this.userPhone);
       console.log("User Info: " + this.userInfo);
+      this.userName = "";
+      this.userEmail = "";
+      this.userPhone = "";
+      this.userInfo = "";
     },
   },
 };

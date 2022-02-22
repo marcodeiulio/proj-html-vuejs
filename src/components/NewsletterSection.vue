@@ -14,14 +14,14 @@
           <div class="row gy-3">
             <div class="col-12">
               <input-field
-                @input-value="userName += $event"
+                @input-value="userName += $event.trim()"
                 :input-type="'text'"
                 :input-placeholder="'Name'"
               />
             </div>
             <div class="col-12">
               <input-field
-                @input-value="userEmail += $event"
+                @input-value="userEmail += $event.trim()"
                 :input-type="'email'"
                 :input-placeholder="'Email'"
               />
@@ -59,7 +59,15 @@ export default {
   methods: {
     printForm() {
       console.log("User Name: " + this.userName);
-      console.log("User Email: " + this.userEmail);
+      if (
+        !this.userEmail.includes("@") ||
+        !this.userEmail.includes(".") ||
+        this.userEmail.includes(" ")
+      )
+        console.log("Invalid Email Address");
+      else console.log("User Email: " + this.userEmail);
+      this.userName = "";
+      this.userEmail = "";
     },
   },
 };
